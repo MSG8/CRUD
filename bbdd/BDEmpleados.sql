@@ -1,4 +1,5 @@
-USE 'nombre_BD';
+-- USE 'nombre_BD';
+USE 'BDEMPLEADO';
 
 CREATE TABLE EMPLEADO
 (

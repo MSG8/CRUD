@@ -4,16 +4,12 @@
    */
   class Crud
   {
-    private $servidor;
-    private $usuario;
-    private $contrasenia;
-    private $basedatos;
-
-    public $mysqli;
+    public $conexion;
 
     function __construct()
     {
-      $mysqli = new mysqli($servidor, $usuario, $contrasenia, $basedatos);
+      require 'conexion.php';
+      $this->conexion = new mysqli(SERVIDOR, USUARIO, CONTRASENIA, BASEDATOS);
     }
   }
 
