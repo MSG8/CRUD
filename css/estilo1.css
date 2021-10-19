@@ -1,0 +1,54 @@
+body
+{
+    width: 600px;
+    margin: 0 auto;
+}
+
+body main
+{
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px 0;
+}
+
+body main section
+{
+    width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+body main section img
+{
+    width: 30px;
+    float: left;
+    padding: auto;
+}
+
+body main section div
+{
+    float: left;
+    border: darkslategrey inset 2px;
+    width: 151px;
+    height: 30px;
+}
+
+body
+{
+    background-image: url("https://comunidad.iebschool.com/iebs/files/2015/04/employer-branding.png");
+    background-size: 100%;
+}
+
+body main
+{
+    background-color: cornsilk;
+    opacity: 0.9;
+}
+
+body main section
+{
+    text-align: center;
+    background-color: rgb(200, 182, 121);
+    border: darkslategrey outset 5px;
+}
+

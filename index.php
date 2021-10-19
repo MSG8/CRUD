@@ -7,19 +7,38 @@
 		<meta type="description" content="Prueba de conectar base de dato y sacar un valor en concreto"/>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 		<title> Las Mujeres en la Histori de la Informatica </title>
-		<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<link rel="stylesheet" type="text/css" href="css/estilo1.css"/>
 	</head>
   <body>
-      <form>
-          <section>
-              <nombre></nombre>
-              <
-          </section>
-      </form>
-    <?php
-		require 'clases/crud.php';
-        $datos = new Crud();
-        var_dump($datos->conexion);
-     ?>
+      <main>
+        <?php
+          require('clases/crud.php');
+
+          $informacion = new Crud();
+
+          $informacion->cerrar();
+        ?>
+        <section>
+          <div> Nombre </div>
+          <div> Correo </div>
+          <img src="imagenes/papelera.png"/>
+          <img src="imagenes/papel.png"/>
+          <img src="imagenes/lupa.png"/>
+        </section>
+        <section>
+          <div> Nombre2 </div>
+          <div> Correo2 </div>
+          <img src="imagenes/papelera.png"/>
+          <img src="imagenes/papel.png"/>
+          <img src="imagenes/lupa.png"/>
+        </section>
+        <section>
+          <div> Nombre3 </div>
+          <div> Correo3 </div>
+          <img src="imagenes/papelera.png"/>
+          <img src="imagenes/papel.png"/>
+          <img src="imagenes/lupa.png"/>
+        </section>
+      </main>
   </body>
 </HTML>
