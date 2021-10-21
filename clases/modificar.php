@@ -1,55 +1,91 @@
 <?php
-    require('crud.php');
-
-    $informacion = new Crud();
-
-    $listaValores = $informacion->buscarId($_GET['id']);
-
-    if ($fila = $listaValores->fetch_row())//llamamos a cada fila del array de toda la base de datos
+    function modificar()
     {
-    echo //creara una seccion de la informacion de cada empleado, ademas de guardar cual es su id en los botones
-        '<section>
-            <form action="?id='.$fila[0].'" method="post" >
-                <h2>¿SEGURO APLICAR ESTA MODIFICACIÓN?</h2>
-                <div>
-                    <label for="id"> Identificador </label>
-                    <input type="number" name="id" value="'.$fila[0].'" "/>
-                </div>
-                <div>
-                    <label for="dni"> DNI </label>
-                    <input type="text" name="dni" value="'.$fila[1].'" "/>
-                </div>
-                <div>
-                    <label for="nombre"> Nombre </label>
-                    <input type="text" name="nombre" value="'.$fila[2].'" "/>
-                </div>
-                <div>
-                    <label for="correo"> Correo </label>
-                    <input type="email" name="correo" value="'.$fila[3].'" "/>
-                </div>
-                <div>
-                    <label for="telefono"> Telefono</label>
-                    <input type="text" name="telefono" value="'.$fila[4].'" "/>
-                </div>
-                <button type="submit" value="si" name="acepta"> SI </button>
-                <a href="index.php"><button type="button" value="no"> NO </button></a>
-            </form>
-        </section>';
-    }
-    else
-    {
-        echo //creara una seccion de la informacion de cada empleado, ademas de guardar cual es su id en los botones
-        '<section>
-            <p>
-                ESTE USUARIO NO EXISTE EN NUESTRA BASE DE DATOS
-            </p>
-            <a href="index.php"><button type="button" value="inicio"> LISTADO </button></a>
-        </section>';
-    }
+        require('crud.php'); //busca  el archivo necesario
 
-    if (isset($_POST["acepta"])) 
-    {
-        $informacion->modificarId($_POST,$_GET['id']);
+        $informacion = new Crud(); //crea el objeto con la informacion de la base de datos
+        $listaValores = $informacion->buscarId($_GET['id']); //saca el empleado deseado
+
+        if ($fila = $listaValores->fetch_row())//llamamos a la fila y confirmamos si existe o no
+        {
+            if (isset($_POST["acepta"])) //si se pulsa el input de acepta se modificaran los datos y se mostrara el usuario ahora modificado
+            {
+                $informacion->modificarId($_POST,$_GET['id']); // modifico la fila
+                $listaValores = $informacion->buscarId($_GET['id']); //la busco de nuevo
+                $fila = $listaValores->fetch_row(); //saco la fila actualizada
+                echo 
+                    '<section>
+                        <form action="?id='.$fila[0].'" method="post" >
+                            <h2> EMPLEADO ACTUALIZADO </h2>
+                            <div>
+                                <label for="id"> Identificador </label>
+                                <input type="number" name="id" value="'.$fila[0].'" readonly="readonly"/>
+                            </div>
+                            <div>
+                                <label for="dni"> DNI </label>
+                                <input type="text" name="dni" value="'.$fila[1].'" readonly="readonly"/>
+                            </div>
+                            <div>
+                                <label for="nombre"> Nombre </label>
+                                <input type="text" name="nombre" value="'.$fila[2].'" readonly="readonly"/>
+                            </div>
+                            <div>
+                                <label for="correo"> Correo </label>
+                                <input type="email" name="correo" value="'.$fila[3].'"readonly="readonly"/>
+                            </div>
+                            <div>
+                                <label for="telefono"> Telefono</label>
+                                <input type="text" name="telefono" value="'.$fila[4].'" readonly="readonly"/>
+                            </div>
+                            <a href="index.php"><input type="button" value="LISTADO"/></a>
+                        </form>
+                    </section>';
+            }
+            else //si no existe el input acepta el usuario podra modificar el formulario con los datos
+            {
+                echo 
+                    '<section>
+                        <form action="?id='.$fila[0].'" method="post" >
+                            <h2>¿SEGURO APLICAR ESTA MODIFICACIÓN?</h2>
+                            <div>
+                                <label for="id"> Identificador </label>
+                                <input type="number" name="id" value="'.$fila[0].'" readonly="readonly"/>
+                            </div>
+                            <div>
+                                <label for="dni"> DNI </label>
+                                <input type="text" name="dni" value="'.$fila[1].'" maxlength="9"/>
+                            </div>
+                            <div>
+                                <label for="nombre"> Nombre </label>
+                                <input type="text" name="nombre" value="'.$fila[2].'" maxlength="50"/>
+                            </div>
+                            <div>
+                                <label for="correo"> Correo </label>
+                                <input type="email" name="correo" value="'.$fila[3].'" maxlength="50"/>
+                            </div>
+                            <div>
+                                <label for="telefono"> Telefono</label>
+                                <input type="text" name="telefono" value="'.$fila[4].'" maxlength="9"/>
+                            </div>
+                            <input type="submit" value="MODIFICAR" name="acepta" />
+                            <a href="index.php"><input type="button" value="CANCELAR"/></a>
+                        </form>
+                    </section>';
+            }
+        }
+        else // si no existe ese usuario te mostrara un aviso
+        {
+            echo 
+            '<section>
+                <p>
+                    ESTE USUARIO NO EXISTE EN NUESTRA BASE DE DATOS
+                </p>
+                <a href="index.php"><input type="button" name="inicio" value="INICIO"/></a>
+            </section>';
+        }
+
+        $informacion->cerrar(); //CIERRA LA CONEXION CON LA BASE DE DATOS
     }
-    $informacion->cerrar();
+    
+    modificar(); // llamamos a la funcion 
 ?>

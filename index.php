@@ -10,10 +10,14 @@
 		<link rel="stylesheet" type="text/css" href="css/estiloLista.css"/>
 	</head>
   <body>
-      <main>
-        <?php
-          require('clases/lista.php'); //Modulado, asi llamara al codigo que requiero para la lista
-        ?>
-      </main>
+	<nav>
+		<a href="anadir.php"> AÑADIR EMPLEADO</a>
+	</nav>
+    <main>
+		<h2> LISTA DE EMPLEADOS </h2>
+		<?php
+			require('clases/lista.php'); //Modulado, asi llamara al codigo que requiero para la lista
+		?>
+    </main>
   </body>
 </HTML>

@@ -12,7 +12,7 @@
   <body>
       <main>
           <?php
-            require ('clases/borrar.php');
+            require ('clases/anadir.php');
           ?>
       </main>
   </body>

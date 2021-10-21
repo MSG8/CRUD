@@ -42,3 +42,9 @@ WHERE IdEmpleado = 10;
 UPDATE EMPLEADO
 SET IdEmpleado='id',DNI='dni',Nombre='nombre',Correo='correo', Telefono='telefono'
 WHERE IdEmpleado = 11; 
+
+-- Agregar solo una persona
+
+INSERT INTO EMPLEADO 
+VALUES  
+	(20,'81858080D','Juan Somez Rodriguez','mgrf11@gmail.com','688688098');

@@ -1,54 +1,75 @@
-*
+/*
+    Manuel Solis Gomez
+    Licencia: Libre
+    Este archivo se aplica en todos los archivps php que aplique el listado
+*/
+*/*Reseteamos valores por defecro que molesten al layout*/
 {
     margin: 0;
     padding: 0;
     border: 0;
 }
-body
+body /*Colocamos el ancho deseado como base de los demas elemento*/
 {
     width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; /*Centramos el elemento*/
 }
 body main
 {
-    width: 700px;
-    margin: 50px auto;
-    padding: 20px 0;
+    width: 700px; /*Colocamos el ancho deseado */
+    margin: 8em auto 0 auto; /*Centramos el elemento*/
+    padding: 20px 0; /*Hacemos que no se encuentre pegado al borde los elementos*/
 }
 body main section
 {
-    width: 600px;
-    margin: 20px auto;
-    overflow: hidden;
-    vertical-align: middle;
+    width: 600px; /*Colocamos el ancho deseado */
+    margin: 20px auto; /*Centramos el elemento*/
+    overflow: hidden; /*usado para tomar el alto mas superior de sus bloques contenidos flotados*/
+    vertical-align: middle; /*centramos los elementos*/
+}
+body main #aviso
+{
+    width: 600px; /*colocamos el ancho deseado*/
+    margin: 20px auto;/*usa separacion de arriba y abajo y centrado*/
+    background-color: transparent; /*quitamos el color que se usamos por defecto*/
+    border: none;/* id de aviso elimina los otros elementos de estilos y colocamos*/
+}
+body main #aviso p
+{
+    color:red; /*si esta el p dentro de un id de aviso elimina los otros elementos de estilos y colocamos el color rojo*/
+    float: none;
+    border:none;
+    width: auto;
+    height: auto;
+    padding: 0;
 }
 body main section img
 {
-    width: 30px;
-    float: left;
-    padding-top: 0.4em;
+    width: 30px; /*Colocamos el ancho deseado */
+    float: left; /*Flotamos los elementos para colocarlos de forma lineal */
+    padding-top: 0.4em; /*centramos las imagenes*/
 }
 body main section p
 {
-    float: left;
+    float: left; /*Flotamos los elementos para colocarlos de forma lineal */
     border: darkslategrey inset 2px;
-    width: 251px;
-    height: 30px;
-    padding-top: 0.6em;
+    width: 251px; /*Colocamos el ancho deseado */
+    min-height: 30px; /*Colocamos el alto minimo de los p*/
+    padding-top: 0.6em; /*lo separamos de abajo*/
 }
 body
 {
     background-image: url("https://comunidad.iebschool.com/iebs/files/2015/04/employer-branding.png");
-    background-size: 100%;
+    background-size: 100%; /*Usado para poner la imagen en toda la pantalla*/
 }
-body main
+body main, nav
 {
     background-color: cornsilk;
-    opacity: 0.9;
+    opacity: 0.9; /*cambiamos la opacidad del color*/
+    text-align: center;
 }
 body main section
 {
-    text-align: center;
     background-color: rgb(200, 182, 121);
     border: darkslategrey outset 5px;
 }
@@ -59,4 +80,26 @@ body main section:nth-child(even)
 body main section:nth-child(odd)
 {
     border-radius: 20px 10px;
+}
+nav
+{
+   width: 100%; /*todo el ancho de la pantalla*/
+   position: fixed;  /*fijamos el elemento en la pantalla*/
+   top: 0; /*lo colocamos arriba del todo y a la izquierda del todo*/
+   left: 0;
+   z-index: 5; /*ponemos que se sobreponga a los otros elementos*/
+}
+nav a
+{
+    display:block;
+    padding: 2em;
+    font-size: large;
+    text-decoration: none;
+    font-weight: bold;
+    color: #232323;
+}
+nav a:hover
+{
+    background-color: #624a23; /*Aplicamos un cambio visual para dar mas estilo a la pagina y mostrar que hay un enlace*/
+    color: #ec9e21;
 }

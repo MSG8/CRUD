@@ -1,0 +1,113 @@
+/*
+    Manuel Solis Gomez
+    Licencia: Libre
+    Este archivo se aplica en todos los archivps php que aplique formulario
+*/
+*/*Reseteamos valores por defecro que molesten al layout*/
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body /*Colocamos el ancho deseado como base de los demas elemento*/
+{
+    width: 800px;
+    margin: 0 auto; /*Centramos el elemento*/
+}
+body main
+{
+    width: 700px; /*Colocamos el ancho deseado */
+    margin: 50px auto; /*Centramos el elemento*/
+    padding: 20px 0; /*Hacemos que no se encuentre pegado al borde los elementos*/
+}
+body main form
+{
+    width: 560px; /*Colocamos el ancho deseado */
+    margin: 20px auto; /*Centramos el elemento*/
+    padding: 20px; /*Hacemos que no se encuentre pegado al borde los elementos*/
+}
+body main form div
+{
+    overflow: hidden; /* Usado para tomar el alto automatico de los elementos flotados contemidos mas alto */
+}
+body main form div input
+{
+    width: 73%; /*Colocamos el ancho deseado */
+    float: left; /*Flotamos los elementos para colocarlos de forma lineal */
+    margin-bottom: 1em; /*Separamos los input uno del otro */
+}
+body main form div label
+{
+    width: 23%; /*Colocamos el ancho deseado */
+    float: left; /*Flotamos los elementos para colocarlos de forma lineal */
+    margin-bottom: 1em; /*Separamos los label uno del otro */
+}
+body main form div input
+{
+    text-align: right;
+    padding: 1em 2% 1em 0;
+}
+body main form div label
+{
+    text-align: left;
+    padding: 1em 0 1em 2%;
+}
+body
+{
+    background-image: url("https://comunidad.iebschool.com/iebs/files/2015/04/employer-branding.png");
+    background-size: 100%; /*Usado para poner la imagen en toda la pantalla*/
+}
+body main
+{
+    background-color: cornsilk;
+    opacity: 0.9; /*cambiamos la opacidad del color*/
+}
+body main section
+{
+    text-align: center; 
+}
+body main section form
+{
+    text-align: center;
+    background-color: rgb(200, 182, 121);
+    border: darkslategrey outset 5px;
+    border-radius: 20px;
+}
+body main section form div label
+{
+    font-weight: bold;
+    text-shadow: 5px 5px 5px #232323;
+    border-radius: 30px;
+}
+body main section form div input
+{
+    border-radius: 20px;
+}
+input[type="submit"], input[type="button"]
+{
+    min-width: 14%;
+    padding: 0.3em;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 15px;
+    background-color: #f5b145;
+    border: 3px #414141 outset;
+    margin:0 3%;
+}
+input[type="submit"]:hover, input[type="button"]:hover
+{
+    background-color: #624a23; /*Aplicamos un cambio visual para dar mas estilo a la pagina*/
+    color: #ec9e21;
+    border: 3px #414141 inset;
+}
+section p
+{
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+    margin-bottom: 1em;
+}
+body main section form h2
+{
+    margin-bottom: 30px; /*Separamos el titulo del los otros elementos del formulario*/
+} 
