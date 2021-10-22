@@ -1,6 +1,6 @@
 -- DROP DATABASE BDEMPLEADO;
 -- CREATE DATABASE BDEMPLEADO;
--- USE 'nombre_BD';
+-- USE 'user2daw_BD2-13';
 USE 'BDEMPLEADO';
 
 -- Creamos la tabla empleado
