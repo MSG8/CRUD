@@ -8,9 +8,8 @@
 
         if ($fila = $listaValores->fetch_row())//llamamos a la fila y confirmamos si existe o no
         {
-            if (isset($_POST["acepta"])) //si se pulsa el input de acepta se modificaran los datos y se mostrara el usuario ahora modificado
+            if (isset($_POST["acepta"]) AND $informacion->modificarId($_POST,$_GET['id']) == true) //si se pulsa el input de acepta y se puede hacer modificar, se modificaran los datos y se mostrara el usuario ahora modificado
             {
-                $informacion->modificarId($_POST,$_GET['id']); // modifico la fila
                 $listaValores = $informacion->buscarId($_GET['id']); //la busco de nuevo
                 $fila = $listaValores->fetch_row(); //saco la fila actualizada
                 echo 
@@ -46,18 +45,18 @@
                 echo 
                     '<section>
                         <form action="?id='.$fila[0].'" method="post" >
-                            <h2>¿SEGURO APLICAR ESTA MODIFICACIÓN?</h2>
+                            <h2> MODIFICACION DEL EMPLEADO </h2>
                             <div>
                                 <label for="id"> Identificador </label>
                                 <input type="number" name="id" value="'.$fila[0].'" readonly="readonly"/>
                             </div>
                             <div>
                                 <label for="dni"> DNI </label>
-                                <input type="text" name="dni" value="'.$fila[1].'" maxlength="9"/>
+                                <input type="text" name="dni" value="'.$fila[1].'" maxlength="9" pattern="[0-9]{8}[A-Z]{1}" required="required" />
                             </div>
                             <div>
                                 <label for="nombre"> Nombre </label>
-                                <input type="text" name="nombre" value="'.$fila[2].'" maxlength="50"/>
+                                <input type="text" name="nombre" value="'.$fila[2].'" maxlength="50" required="required" />
                             </div>
                             <div>
                                 <label for="correo"> Correo </label>
@@ -65,12 +64,22 @@
                             </div>
                             <div>
                                 <label for="telefono"> Telefono</label>
-                                <input type="text" name="telefono" value="'.$fila[4].'" maxlength="9"/>
+                                <input type="text" name="telefono" value="'.$fila[4].'" maxlength="9" pattern="[0-9]{9}" required="required"/>
                             </div>
                             <input type="submit" value="MODIFICAR" name="acepta" />
                             <a href="index.php"><input type="button" value="CANCELAR"/></a>
                         </form>
                     </section>';
+
+                if (isset($_POST["acepta"]) AND $informacion->modificarId($_POST,$_GET['id']) == false)  // si se ha pulsado ya el acepta pero el modificar es false, es por un error de los datos de formualrio repetidos
+                {
+                    echo 
+                        '<section>
+                            <p>
+                                HAS USADO DATOS UNICOS REPETICOS (PUEDE SER LA ID O DNI)
+                            </p>
+                        </section>';
+                }
             }
         }
         else // si no existe ese usuario te mostrara un aviso

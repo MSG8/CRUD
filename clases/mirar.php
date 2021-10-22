@@ -10,6 +10,7 @@
             echo 
                 '<section>
                     <form>
+                        <h2> DATOS DE EMPLEADO </h2>
                         <div>
                             <label for="id"> Identificador </label>
                             <input type="number" name="id" value="'.$fila[0].'" readonly="readonly"/>
@@ -46,6 +47,5 @@
         }
         $informacion->cerrar(); //CERRAMOS LA CONEXION CON LA BASE DE DATOS
     }
-
     ver();
 ?>
