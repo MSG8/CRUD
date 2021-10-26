@@ -1,0 +1,109 @@
+* /*reseteamos todos los valores por defecto de los navegadores para que no interfieran en nuestro layaout*/
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body
+{
+    width: 1200px; /* Con este porcentaje se aplica para pasar los 1200px */
+    margin: 0 auto; /* Asi centrarmos el contenido, el margen se colocara igual en ambos lados */
+    font-size: 16px;
+}
+body header,body nav,body footer
+{
+    height: 9.38rem;
+}
+body main
+{
+    overflow: hidden; /* Asi aplicas el alto del mismo tamaño que su contenido mas alto */
+}
+body main nav
+{
+    min-height: 140px; /* Asi colocamos un minimo de alto por si no contiene nada */
+    padding-left: 30px; /*Separamos algo el contenido del borde*/
+    border: 5px black solid; /*Aplicamos un borde para diferenciar bien los bloques*/
+    width: 360px; /*Aplico un ancho */
+    float: left; /*Floto la caja a la izquierda para que se coloque una al lado de otra aunque seaa un bloque*/
+    height: auto; /*Hago que el alto sea automatico*/
+}
+body main article
+{
+    min-height: 540px; /* Asi colocamos un minimo de alto por si no contiene nada, cambiada por motivos esteticos*/
+    padding: 0 30px; /*Separamos algo el contenido del borde, eliminado ya que se centra solo*/
+    border: 5px black solid; /*Aplicamos un borde para diferenciar bien los bloques*/
+    width: 730px; /*Aplico un ancho */
+    float: left; /*Floto la caja a la izquierda para que se coloque una al lado de otra aunque seaa un bloque*/
+    height: auto; /*Hago que el alto sea automatico*/
+}
+html
+{
+    background-color: #3f3e3c;
+}
+body header
+{
+    background-color: coral;
+}
+body nav
+{
+    background-color: #ee3a3a;
+}
+body footer
+{
+    background-color: #94e1df;
+}
+body main
+{
+    background-color: #c07a2e;
+}
+body main nav
+{
+    background-color: #cac519;
+}
+body main article
+{
+    background-color: #80d130;
+}
+nav a
+{
+    display:block;
+    padding: 2em;
+    font-size: large;
+    text-decoration: none;
+    font-weight: bold;
+    color: #232323;
+    text-align: center;
+    height: auto;
+    line-height: normal;
+}
+nav a:hover
+{
+    background-color: #624a23; /*Aplicamos un cambio visual para dar mas estilo a la pagina y mostrar que hay un enlace*/
+    color: #ec9e21;
+}
+body main article
+{
+    background-image: url("https://comunidad.iebschool.com/iebs/files/2015/04/employer-branding.png");
+    background-size: 100%; /*Usado para poner la imagen en toda la pantalla*/
+}
+ul
+{
+    list-style-type: none;
+}
+#aviso p
+{
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+    color: red;
+    margin-bottom: 1em;
+}
+#aviso  
+{
+    padding: 20px 0;
+    margin: 20px auto; /*Centramos el elemento*/
+    background-color: cornsilk;
+    text-align: center;
+    border:none;
+    opacity: 0.9;
+}

@@ -32,21 +32,21 @@
 
     public function modificarId($formulario,$id) //Modificiamos el empleado pedido
     {
-      $consulta = "UPDATE EMPLEADO SET IdEmpleado='".$formulario['id']."',DNI='".$formulario['dni']."',Nombre='".$formulario['nombre']."',Correo=".$this->vaciar($formulario['correo']).", Telefono='".$formulario['telefono']."'  WHERE IdEmpleado = ".$id.";"; // Colocamos la consulta para actualizar los datos de dicho empleado
+      $consulta = "UPDATE EMPLEADO SET  ',DNI='".$formulario['dni']."',Nombre='".$formulario['nombre']."',Correo=".$this->vaciar($formulario['correo']).", Telefono='".$formulario['telefono']."'  WHERE IdEmpleado = ".$id.";"; // Colocamos la consulta para actualizar los datos de dicho empleado
       return $this->conexion->query($consulta); //Enviamos la consulta al metodo query del objeto conexion (mysqli)
     }
 
     public function anadir($formulario) //Añadimos un nuevo empleado
     {
-      $consulta = "INSERT INTO EMPLEADO VALUES ('".$formulario['id']."','".$formulario['dni']."','".$formulario['nombre']."',".$this->vaciar($formulario['correo']).", '".$formulario['telefono']."');"; // Colocamos la consulta para agregar
+      $consulta = "INSERT INTO EMPLEADO (DNI,Nombre,Correo,Telefono) VALUES ('".$formulario['dni']."','".$formulario['nombre']."',".$this->vaciar($formulario['correo']).", '".$formulario['telefono']."');"; // Colocamos la consulta para agregar
       return $this->conexion->query($consulta); //Enviamos la consulta al metodo query del objeto conexion (mysqli)
     }
 
     public function vaciar($valor) //Metodo para colocar si algun cambio esta vacio, como null
     {
-      if ($valor == "") 
+      if (empty($valor)) 
       {
-        return 'nu'.'ll'; // envio una concatenacion poruqe si no no lo entiende php
+        return 'null'; // envio una concatenacion poruqe si no no lo entiende php
       }
       else
       {

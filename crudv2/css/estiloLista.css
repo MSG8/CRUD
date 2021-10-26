@@ -1,0 +1,50 @@
+/*
+    Manuel Solis Gomez
+    Licencia: Libre
+    Este archivo se aplica en todos los archivps php que aplique el listado
+*/
+body main section
+{
+    width: 720px; /*Colocamos el ancho deseado */
+    margin: 20px auto; /*Centramos el elemento*/
+    overflow: hidden; /*usado para tomar el alto mas superior de sus bloques contenidos flotados*/
+    vertical-align: middle; /*centramos los elementos*/
+}
+body main section img
+{
+    width: 30px; /*Colocamos el ancho deseado */
+    float: left; /*Flotamos los elementos para colocarlos de forma lineal */
+    padding-top: 0.4em; /*centramos las imagenes*/
+}
+body main section p
+{
+    float: left; /*Flotamos los elementos para colocarlos de forma lineal */
+    border: darkslategrey inset 2px;
+    width: 301px; /*Colocamos el ancho deseado */
+    min-height: 30px; /*Colocamos el alto minimo de los p*/
+    padding-top: 0.6em; /*lo separamos de abajo*/
+    padding: 0.6em 5px 0 5px;
+}
+body main article section
+{
+    background-color: rgb(200, 182, 121);
+    border: darkslategrey outset 5px;
+    opacity: 0.9;
+}
+body main article section:nth-child(even)
+{
+    border-radius: 10px 20px;
+}
+body main article section:nth-child(odd)
+{
+    border-radius: 20px 10px;
+}
+body main article div 
+{
+    width: 720px;
+    margin: 20px auto; /*Separamos el titulo del los otros elementos del formulario*/
+    text-align: center;
+    background-color: rgb(200, 182, 121);
+    border: darkslategrey outset 5px;
+    opacity: 0.9;
+} 
