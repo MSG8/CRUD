@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta type="author" content="Manuel Solis Gomez"/>
-		<meta type="description" content="Pagina de inicio de layout"/>
+		<meta type="description" content="Pagina para modificar informacion de empleados de una empresa/>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-		<title> Las Mujeres en la Histori de la Informatica </title>
+		<title> Administrador de empleados </title>
 		<link rel="stylesheet" type="text/css" href="css/trabajoPx.css">
         <?php css(); ?>
 	</head>

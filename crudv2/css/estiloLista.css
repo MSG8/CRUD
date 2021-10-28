@@ -1,50 +1,74 @@
 /*
     Manuel Solis Gomez
     Licencia: Libre
-    Este archivo se aplica en todos los archivps php que aplique el listado
+    Este archivo se aplica en todos los archivps php que aplique el listado, con medidas de px
 */
-body main section
+body main article 
 {
-    width: 720px; /*Colocamos el ancho deseado */
-    margin: 20px auto; /*Centramos el elemento*/
+    text-align: center; /*Centramos lo que ponga*/
+} 
+body main article div 
+{
+    width: 730px;/*Colocamos el ancho deseado, junto al borde daria 740px, que mas el padding de su contenedor serian 800px, el totl del main */
+    margin: 20px auto; /*Separamos el titulo del los otros elementos del formulario*/
+    text-align: center; /*Centramos lo que ponga*/
+    background-color: rgb(200, 182, 121);
+    border: darkslategrey outset 5px;
+    opacity: 0.9; /*lo ponemos un poco menos opaco*/
+} 
+body main article section
+{
+    width: 730px; /*Colocamos el ancho deseado, junto al borde daria 740px, que mas el padding de su contenedor serian 800px, el totl del main */
+    margin: 20px auto; /*Centramos el elemento, si se quita el padding del contenedor se creara margen nuevo que lo centrara, ademas separamos algo de los borde arriba y abajo*/
     overflow: hidden; /*usado para tomar el alto mas superior de sus bloques contenidos flotados*/
-    vertical-align: middle; /*centramos los elementos*/
+    border: darkslategrey outset 5px; /*Colocamos el borde deseado, aumentaria 10px el width*/
 }
-body main section img
-{
-    width: 30px; /*Colocamos el ancho deseado */
-    float: left; /*Flotamos los elementos para colocarlos de forma lineal */
-    padding-top: 0.4em; /*centramos las imagenes*/
-}
-body main section p
+body main article section p
 {
     float: left; /*Flotamos los elementos para colocarlos de forma lineal */
-    border: darkslategrey inset 2px;
-    width: 301px; /*Colocamos el ancho deseado */
+    border: darkslategrey inset 2px; /*Colocamos un pequeño borde para distinguir la diferente informacion, sumaria 4px(x2=8px) a su ancho total*/
+    width: 306px; /*Colocamos el ancho deseado de cada p, en total seria 320 por p(x2=640) */
     min-height: 30px; /*Colocamos el alto minimo de los p*/
-    padding-top: 0.6em; /*lo separamos de abajo*/
-    padding: 0.6em 5px 0 5px;
+    padding: 10px 5px 0 5px; /* Colocamos un padding para separar el texto de los bordes, sumaria 10px(x2=20px) mas al ancho total*/
+    text-align: justify; /* Alineamos el texto de forma justificada*/
+}
+body main article section img
+{
+    width: 30px; /*Colocamos el ancho deseado, 30px(x3=90px) por imagen, si sumamos los p y las imagenes tendremos un ancho total de 730px, que es el ancho util de su contenedor*/
+    float: left; /*Flotamos los elementos para colocarlos de forma lineal */
+    padding-top: 7px; /*centramos las imagenes*/
 }
 body main article section
 {
-    background-color: rgb(200, 182, 121);
-    border: darkslategrey outset 5px;
-    opacity: 0.9;
+    opacity: 0.9; /*lo ponemos un poco menos opaco*/
 }
 body main article section:nth-child(even)
 {
-    border-radius: 10px 20px;
+    border-radius: 10px 20px; /*si es impar se aplica un bordes_radios y un color diferente*/
+    background-color: rgb(236, 230, 208);;
 }
 body main article section:nth-child(odd)
 {
-    border-radius: 20px 10px;
-}
-body main article div 
-{
-    width: 720px;
-    margin: 20px auto; /*Separamos el titulo del los otros elementos del formulario*/
-    text-align: center;
+    border-radius: 20px 10px; /*si es par se aplica un bordes_radios y un color diferente*/
     background-color: rgb(200, 182, 121);
-    border: darkslategrey outset 5px;
-    opacity: 0.9;
-} 
+}
+body main article #anadir
+{
+    display: inline-block; /*colocamos inline-block para centrar el enlace */
+    width: 200px; /*colocamos el ancho deseaado, su ancho total sera de 218px*/
+    padding: 6px; /*colocamos padding por todos los lados para que no se encuentre pegado el texto a los bordes, se sumarian 12px mas al ancho*/
+    font-weight: bold; 
+    font-size: large;
+    border-radius: 15px;
+    background-color: #f5b145;
+    border: 3px #414141 outset; /*se aplica bordes por todos los lados, se sumarian 6 px mas al ancho*/
+    text-decoration: none;
+    color:black; 
+    margin-bottom: 20px; /* Colocamos un margen inferior para no pegar el boton al borde*/
+}
+body main article #anadir:hover
+{
+    background-color: #624a23; /*Aplicamos un cambio visual para dar mas estilo a la pagina*/
+    color: #ec9e21;
+    border: 3px #414141 inset;
+}

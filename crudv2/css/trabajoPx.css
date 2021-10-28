@@ -1,3 +1,8 @@
+/*
+    Manuel Solis Gomez
+    Licencia: Libre
+    Este archivo aplica los estilos layout y general de la pagina, se aplica en px 
+*/
 * /*reseteamos todos los valores por defecto de los navegadores para que no interfieran en nuestro layaout*/
 {
     padding: 0;
@@ -10,9 +15,13 @@ body
     margin: 0 auto; /* Asi centrarmos el contenido, el margen se colocara igual en ambos lados */
     font-size: 16px;
 }
-body header,body nav,body footer
+body header,body footer
 {
-    height: 9.38rem;
+    height: 150px;
+}
+body nav
+{
+    height: 100px;
 }
 body main
 {
@@ -20,19 +29,17 @@ body main
 }
 body main nav
 {
-    min-height: 140px; /* Asi colocamos un minimo de alto por si no contiene nada */
+    min-height: 150px; /* Asi colocamos un minimo de alto por si no contiene nada */
     padding-left: 30px; /*Separamos algo el contenido del borde*/
-    border: 5px black solid; /*Aplicamos un borde para diferenciar bien los bloques*/
-    width: 360px; /*Aplico un ancho */
+    width: 370px; /*Aplico un ancho */
     float: left; /*Floto la caja a la izquierda para que se coloque una al lado de otra aunque seaa un bloque*/
     height: auto; /*Hago que el alto sea automatico*/
 }
 body main article
 {
-    min-height: 540px; /* Asi colocamos un minimo de alto por si no contiene nada, cambiada por motivos esteticos*/
+    min-height: 550px; /* Asi colocamos un minimo de alto por si no contiene nada, cambiada por motivos esteticos*/
     padding: 0 30px; /*Separamos algo el contenido del borde, eliminado ya que se centra solo*/
-    border: 5px black solid; /*Aplicamos un borde para diferenciar bien los bloques*/
-    width: 730px; /*Aplico un ancho */
+    width: 740px; /*Aplico un ancho */
     float: left; /*Floto la caja a la izquierda para que se coloque una al lado de otra aunque seaa un bloque*/
     height: auto; /*Hago que el alto sea automatico*/
 }
@@ -67,7 +74,7 @@ body main article
 nav a
 {
     display:block;
-    padding: 2em;
+    padding: 36px;
     font-size: large;
     text-decoration: none;
     font-weight: bold;

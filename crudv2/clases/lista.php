@@ -22,6 +22,8 @@
         </section>';
     }
 
+    echo '<a href="clases/direc.php?op=anadir" id="anadir"> AÑADIR EMPLEADO </a>';
+
     if ($listaValores->num_rows <= 0) //si la base de dato no tiene empleados mostrara esta informacion
     {
       echo 
