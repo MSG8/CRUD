@@ -18,38 +18,9 @@
         else 
         {
             $listaValores = $informacion->buscarId($_GET['id']); // llamamos al metodo de buscar por id, asi podremos enseñar al usuario el empleado que va a borrar
-
             if ($fila = $listaValores->fetch_row())//llamamos su fila, si existe mostrara los datos por el formulario
             {
-                echo 
-                    '<section>
-                        <form action="?id='.$_GET['id'].'&op=borrar" method="post">
-                            <h2>¿SEGURO DE BORRAR ESTE USUARIO?</h2>
-                            <div>
-                                <label for="id"> Identificador </label>
-                                <input type="number" name="id" value="'.$fila[0].'" readonly="readonly"/>
-                            </div>
-                            <div>
-                                <label for="dni"> DNI </label>
-                                <input type="text" name="dni" value="'.$fila[1].'" readonly="readonly"/>
-                            </div>
-                            <div>
-                                <label for="nombre"> Nombre </label>
-                                <input type="text" name="nombre" value="'.$fila[2].'" readonly="readonly"/>
-                            </div>
-                            <div>
-                                <label for="correo"> Correo </label>
-                                <input type="email" name="correo" value="'.$fila[3].'"readonly="readonly"/>
-                            </div>
-                            <div>
-                                <label for="telefono"> Telefono</label>
-                                <input type="text" name="telefono" value="'.$fila[4].'" readonly="readonly"/>
-                            </div>
-                            
-                            <input type="submit" value="BORRAR" name="acepta" />
-                            <a href="index.php"><input type="button" value="CANCELAR"/></a>
-                        </form>
-                    </section>';
+                require('formulario/borrarEmpleado.php'); // formulario a rellenar para crear un empleado
             }
             else //si no existe esa fila, avisa al usuario que no existe
             {

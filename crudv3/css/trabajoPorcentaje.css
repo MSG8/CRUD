@@ -13,15 +13,15 @@ body
 {
     width: 83.3333%; /* Con este porcentaje se aplica para pasar los 1200px en referencia a los 1440 del html */
     margin: 0 auto; /* Asi centrarmos el contenido, el margen se colocara igual en ambos lados */
-    font-size: 16px;
+    font-size: 16px; /* Se pone el tamaño que usaremos para medidas rem o em */
 }
 body header,body footer
 {
-    height: 150px;
+    height: 9.38rem;
 }
 body nav
 {
-    height: 100px;
+    height: 6.25rem;
 }
 body main
 {
@@ -29,7 +29,7 @@ body main
 }
 body main nav
 {
-    min-height: 150px; /* Asi colocamos un minimo de alto por si no contiene nada */
+    min-height: 9.38rem; /* Asi colocamos un minimo de alto por si no contiene nada */
     padding-left: 2.5%; /*Separamos algo el contenido del borde*/
     width: 30.83%; /*Aplico un ancho */
     float: left; /*Floto la caja a la izquierda para que se coloque una al lado de otra aunque seaa un bloque*/
@@ -37,7 +37,7 @@ body main nav
 }
 body main article
 {
-    min-height: 550px; /* Asi colocamos un minimo de alto por si no contiene nada, cambiada por motivos esteticos*/
+    min-height: 34.38rem; /* Asi colocamos un minimo de alto por si no contiene nada, cambiada por motivos esteticos*/
     padding: 0 2.5%; /*Separamos algo el contenido del borde, eliminado ya que se centra solo*/
     width: 61.67%; /*Aplico un ancho */
     float: left; /*Floto la caja a la izquierda para que se coloque una al lado de otra aunque seaa un bloque*/
@@ -74,7 +74,7 @@ body main article
 body main nav a
 {
     display:block;
-    padding: 9.73%;
+    padding: 2.25rem 9.73%;
     font-size: large;
     text-decoration: none;
     font-weight: bold;
@@ -107,8 +107,8 @@ ul
 }
 #aviso  
 {
-    padding: 20px 0;
-    margin: 20px auto; /*Centramos el elemento*/
+    padding: 1.25rem 0;
+    margin: 1.25rem auto; /*Centramos el elemento*/
     background-color: cornsilk;
     text-align: center;
     border:none;

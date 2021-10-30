@@ -10,7 +10,7 @@ body main article
 body main article div 
 {
     width: 98.65%;/*Colocamos el ancho deseado, junto al borde daria 740px, que mas el padding de su contenedor serian 800px, el totl del main */
-    margin: 20px auto; /*Separamos el titulo del los otros elementos del formulario*/
+    margin: 1.25rem auto; /*Separamos el titulo del los otros elementos del formulario*/
     text-align: center; /*Centramos lo que ponga*/
     background-color: rgb(200, 182, 121);
     border: darkslategrey outset 5px;
@@ -18,8 +18,8 @@ body main article div
 } 
 body main article section
 {
-    width: 98.65%; /*Colocamos el ancho deseado, junto al borde daria 740px, que mas el padding de su contenedor serian 800px, el totl del main */
-    margin: 20px auto; /*Centramos el elemento, si se quita el padding del contenedor se creara margen nuevo que lo centrara, ademas separamos algo de los borde arriba y abajo*/
+    width: 98.65%; /*Colocamos el ancho deseado, junto al borde daria 740px, que mas el padding de su contenedor serian 800px, el totl del main, le restaremos el borde para que se adapte */
+    margin: 1.25rem auto; /*Centramos el elemento, si se quita el padding del contenedor se creara margen nuevo que lo centrara, ademas separamos algo de los borde arriba y abajo*/
     overflow: hidden; /*usado para tomar el alto mas superior de sus bloques contenidos flotados*/
     border: darkslategrey outset 5px; /*Colocamos el borde deseado, aumentaria 10px el width*/
 }
@@ -28,15 +28,15 @@ body main article section p
     float: left; /*Flotamos los elementos para colocarlos de forma lineal */
     border: darkslategrey inset 2px; /*Colocamos un pequeño borde para distinguir la diferente informacion, sumaria 4px(x2=8px) a su ancho total*/
     width: 41.92%; /*Colocamos el ancho deseado de cada p, en total seria 320 por p(x2=640) */
-    min-height: 30px; /*Colocamos el alto minimo de los p*/
-    padding: 1.37% 0.68% 0 0.68%; /* Colocamos un padding para separar el texto de los bordes, sumaria 10px(x2=20px) mas al ancho total*/
+    min-height: 1.88rem; /*Colocamos el alto minimo de los p*/
+    padding: 0.63rem 0.68% 0 0.68%; /* Colocamos un padding para separar el texto de los bordes, sumaria 10px(x2=20px) mas al ancho total*/
     text-align: justify; /* Alineamos el texto de forma justificada*/
 }
 body main article section img
 {
-    width: 4.11%; /*Colocamos el ancho deseado, 30px(x3=90px) por imagen, si sumamos los p y las imagenes tendremos un ancho total de 730px, que es el ancho util de su contenedor*/
+    width: 3.94%; /*Colocamos el ancho deseado, 30px(x3=90px) por imagen, si sumamos los p y las imagenes tendremos un ancho total de 730px, que es el ancho util de su contenedor. Quitamos un poco mas de % ya que se suma varias diferencias entre los border y anchos*/
     float: left; /*Flotamos los elementos para colocarlos de forma lineal */
-    padding-top: 7px; /*centramos las imagenes*/
+    padding-top: 0.44rem; /*centramos las imagenes*/
 }
 body main article section
 {
@@ -55,16 +55,16 @@ body main article section:nth-child(odd)
 body main article #anadir
 {
     display: inline-block; /*colocamos inline-block para centrar el enlace */
-    width: 27.03%; /*colocamos el ancho deseaado, su ancho total sera de 218px*/
+    width: 26.62%; /*colocamos el ancho deseaado, su ancho total sera de 218px*/
     padding: 0.81%; /*colocamos padding por todos los lados para que no se encuentre pegado el texto a los bordes, se sumarian 12px mas al ancho*/
     font-weight: bold; 
     font-size: large;
     border-radius: 15px;
     background-color: #f5b145;
-    border: 3px #414141 outset; /*se aplica bordes por todos los lados, se sumarian 6 px mas al ancho*/
+    border: 3px #414141 outset; /*se aplica bordes por todos los lados, se sumarian 6 px mas al ancho, tomaremos su valor en porcentaje y se lo restaremos al width para que se adapte a la pantalla*/
     text-decoration: none;
     color:black; 
-    margin-bottom: 20px; /* Colocamos un margen inferior para no pegar el boton al borde*/
+    margin-bottom: 1.25rem; /* Colocamos un margen inferior para no pegar el boton al borde*/
 }
 body main article #anadir:hover
 {

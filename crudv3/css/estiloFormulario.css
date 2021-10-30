@@ -6,13 +6,13 @@
 body main section form
 {
     width: 75.68%; /*Colocamos el ancho deseado, sumado a su padding dara 600 y con su borde sera 610px, el ancho total que queremos*/
-    margin: 20px auto; /*Centramos el elemento y lo separamos del borde superior e inferior del main*/
-    padding: 2.70%; /*Hacemos que no se encuentre pegado al borde los elementos, sumando 40 px a su ancho total*/
+    margin: 1.25rem auto; /*Centramos el elemento y lo separamos del borde superior e inferior del main*/
+    padding: 1.25rem 2.70%; /*Hacemos que no se encuentre pegado al borde los elementos, sumando 40 px a su ancho total*/
     border: darkslategrey outset 5px; /*Añadimos el borde deseado, se sumara 10px mas a su ancho total*/
 }
 body main section form h2
 {
-    margin-bottom: 30px; /*Separamos el titulo del los otros elementos del formulario*/
+    margin-bottom: 1.88rem; /*Separamos el titulo del los otros elementos del formulario*/
 } 
 body main section form div
 {
@@ -22,17 +22,17 @@ body main section form div input
 {
     width: 72.14%; /*Colocamos el ancho deseado, si se suma el padding sera un ancho total de 420px que es el ancho del boceto */
     float: left; /*Flotamos los elementos para colocarlos de forma lineal */
-    margin-bottom: 16px; /*Separamos los input uno del otro */
+    margin-bottom: 1rem; /*Separamos los input uno del otro */
     text-align: right; /* Colocamos el texto alineado a la derecha*/
-    padding: 16px 2.86% 16px 0; /* Colocamos un padding, este sumara 16px mas al ancho total*/
+    padding: 1rem 2.86% 1rem 0; /* Colocamos un padding, este sumara 16px mas al ancho total*/
 }
 body main section form div label
 {
     width: 22.14%; /*Colocamos el ancho deseado, si se suma el padding sera un ancho total de 120px que es el ancho de nuestro boceto */
     float: left; /*Flotamos los elementos para colocarlos de forma lineal */
-    margin-bottom: 16px; /*Separamos los label uno del otro */
+    margin-bottom: 1rem; /*Separamos los label uno del otro */
     text-align: left; /* Colocamos el texto alineado a la izquierda*/
-    padding: 16px 0 16px 2.86%; /* Colocamos un padding, este sumara 16px mas al ancho total*/
+    padding: 1rem 0 1rem 2.86%; /* Colocamos un padding, este sumara 16px mas al ancho total*/
 }
 body main section form
 {
