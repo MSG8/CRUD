@@ -1,7 +1,7 @@
 /*
     Manuel Solis Gomez
     Licencia: Libre
-    Este archivo aplica los estilos layout y general de la pagina, se aplica en px 
+    Este archivo aplica los estilos layout y estilo general de la pagina, se aplica en porcentaje
 */
 * /*reseteamos todos los valores por defecto de los navegadores para que no interfieran en nuestro layaout*/
 {
@@ -17,11 +17,11 @@ body
 }
 body header,body footer
 {
-    height: 9.38rem;
+    height: 9.38rem; /*Segun su font-size:16px se aplicara 150px*/
 }
 body nav
 {
-    height: 6.25rem;
+    height: 6.25rem; /*Segun su font-size:16px se aplicara 100px*/
 }
 body main
 {
@@ -29,17 +29,17 @@ body main
 }
 body main nav
 {
-    min-height: 9.38rem; /* Asi colocamos un minimo de alto por si no contiene nada */
-    padding-left: 2.5%; /*Separamos algo el contenido del borde*/
-    width: 30.83%; /*Aplico un ancho */
+    min-height: 9.38rem; /* Asi colocamos un minimo de alto por si no contiene nada, segun su font-size:16px se aplicara 150px */
+    padding-left: 2.5%; /*Separamos algo el contenido del borde, segun el porcentaje sera 30px */
+    width: 30.83%; /*Aplico un ancho, segun el porcentaje sera 370px */
     float: left; /*Floto la caja a la izquierda para que se coloque una al lado de otra aunque seaa un bloque*/
     height: auto; /*Hago que el alto sea automatico*/
 }
 body main article
 {
-    min-height: 34.38rem; /* Asi colocamos un minimo de alto por si no contiene nada, cambiada por motivos esteticos*/
+    min-height: 34.38rem; /* Asi colocamos un minimo de alto por si no contiene nada, cambiada por motivos esteticos, segun su font-size:16px se aplicara 550px */
     padding: 0 2.5%; /*Separamos algo el contenido del borde, eliminado ya que se centra solo*/
-    width: 61.67%; /*Aplico un ancho */
+    width: 61.67%; /*Aplico un ancho, segun el porcentaje sera 740px */
     float: left; /*Floto la caja a la izquierda para que se coloque una al lado de otra aunque seaa un bloque*/
     height: auto; /*Hago que el alto sea automatico*/
 }
@@ -74,7 +74,7 @@ body main article
 body main nav a
 {
     display:block;
-    padding: 2.25rem 9.73%;
+    padding: 2.25rem 9.73%; /*Aplicamos un espacio en el interior del a para que se vea mas grande, segun el porcentaje y el rem se correspondera a 36px*/
     font-size: large;
     text-decoration: none;
     font-weight: bold;
@@ -103,12 +103,12 @@ ul
     font-weight: bolder;
     font-size: larger;
     color: red;
-    margin-bottom: 1em;
+    margin-bottom: 1em; /*Separamos 16 px la parte inferior*/
 }
 #aviso  
 {
-    padding: 1.25rem 0;
-    margin: 1.25rem auto; /*Centramos el elemento*/
+    padding: 1.25rem 0; /*Separamos la parte superior e inferior 20px*/
+    margin: 1.25rem auto; /*Centramos el elemento,separamos la parte superior e inferior 20px */
     background-color: cornsilk;
     text-align: center;
     border:none;

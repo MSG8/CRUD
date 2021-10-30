@@ -28,7 +28,7 @@ body main section form div input
 }
 body main section form div label
 {
-    width: 124px; /*Colocamos el ancho deseado, si se suma el padding sera un ancho total de 120px que es el ancho de nuestro boceto */
+    width: 124px; /*Colocamos el ancho deseado, si se suma el padding sera un ancho total de 140px que es el ancho de nuestro boceto */
     float: left; /*Flotamos los elementos para colocarlos de forma lineal */
     margin-bottom: 16px; /*Separamos los label uno del otro */
     text-align: left; /* Colocamos el texto alineado a la izquierda*/
@@ -73,6 +73,6 @@ section p
     text-align: center;
     font-weight: bolder;
     font-size: larger;
-    margin-bottom: 1em;
+    margin-bottom: 1em; /* Separamos el margen inferior para que no se pegue al borde*/
 }
 
