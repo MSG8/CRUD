@@ -25,6 +25,15 @@
                         </p>
                     </div>';
                 }
+                else 
+                {
+                    echo 
+                    '<div id="aviso">
+                        <p>
+                            ERROR NO IDENTIFICADO
+                        </p>
+                    </div>';
+                }
             }
         }
 
