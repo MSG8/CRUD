@@ -13,6 +13,12 @@ switch ($_GET['op'])
     case 'modificar':
         header("Location: ../index.php?id=".$_GET['id']."&op=".$_GET['op']."");
         break;
+    case 'buscarDni':
+        header("Location: ../index.php?op=".$_GET['op']."");
+        break;
+    case 'buscarNombre':
+        header("Location: ../index.php?op=".$_GET['op']."");
+        break;
     default:
         header("Location: ../index.php");
         break;

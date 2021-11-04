@@ -36,6 +36,16 @@ SELECT *
 FROM EMPLEADO
 WHERE IdEmpleado = 10;
 
+-- Buscamos por un dni en especifico
+SELECT * 
+FROM EMPLEADO
+WHERE DNI = 10;
+
+-- Buscamos por un nombre en especifico
+SELECT * 
+FROM EMPLEADO 
+WHERE REPLACE(Nombre,' ', '') LIKE REPLACE('%u a %',' ', ''); -- REPLACE TE PERMITE CAMBIAR UN STRING BUSCADO POR OTRO
+
 -- Borrar por un id
 DELETE FROM EMPLEADO
 WHERE IdEmpleado = 10;

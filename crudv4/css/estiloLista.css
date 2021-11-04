@@ -32,11 +32,19 @@ body main article section p
     padding: 0.63rem 0.68% 0 0.68%; /* Colocamos un padding para separar el texto de los bordes, en px seria 10 superior y 5px de los lados, sumaria 10px(x2=20px) mas al ancho total*/
     text-align: justify; /* Alineamos el texto de forma justificada*/
 }
-body main article section img
+body main article section div
 {
     width: 3.94%; /*Colocamos el ancho deseado, 30px(x3=90px) por imagen, si sumamos los p y las imagenes tendremos un ancho total de 730px, que es el ancho util de su contenedor. Quitamos un poco mas de % ya que se suma varias diferencias entre los border y anchos*/
     float: left; /*Flotamos los elementos para colocarlos de forma lineal */
     padding-top: 0.44rem; /*centramos las imagenes, con 7px superiores*/
+    margin: 0; /*eliminamos valores*/
+    border: 0;
+    background-color: transparent;
+}
+body main article section div img
+{
+    width: 100%; /*Colocamos ancho al 100% para que tome todo el div*/
+    height: auto; /*Colocamos el alto auto*/
 }
 body main article section
 {

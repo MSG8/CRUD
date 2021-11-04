@@ -34,6 +34,13 @@
       return $this->resultado;
     }
 
+    public function buscarNombre($nombre) //Traemos el empleado buscando por su dni
+    {
+      $consulta = "SELECT * FROM EMPLEADO WHERE REPLACE(Nombre,' ', '') LIKE REPLACE('%".$nombre."%',' ', '');"; // Colocamos la consulta para traer todos los datos donde sea el id seleccionado
+      $this->resultado= $this->conexion->query($consulta); //Enviamos la consulta al metodo query del objeto conexion (mysqli) y devolvera el array con la fila pedida
+      return $this->resultado;
+    }
+
     public function eleminarId($id) //Borra el empleado por su id
     {
       $consulta = "DELETE FROM EMPLEADO WHERE IdEmpleado = ".$id.";"; // Colocamos la consulta para eliminar el empleado pedido
