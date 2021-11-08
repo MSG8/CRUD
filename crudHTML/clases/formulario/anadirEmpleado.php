@@ -3,7 +3,7 @@
     {
         echo 
             '<section>
-                <form action="" method="post" >
+                <form action="#" method="post" >
                     <h2> AÑADIR NUEVO EMPLEADO </h2>
                     <div>
                         <label for="dni"> DNI </label>

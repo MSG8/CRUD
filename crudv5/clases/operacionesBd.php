@@ -17,7 +17,7 @@
 
     public function hacerConsulta($consulta) //metodo usado por si se modifica el objeto que trabaja con bases de datos
     {
-      $this->conexion->query($consulta);
+      return $this->conexion->query($consulta);
     }
 
     public function lista() //Saca toda la informacion de una tabla especifica

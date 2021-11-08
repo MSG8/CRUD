@@ -16,6 +16,7 @@
             require('formulario/buscarEmpleado.php');
             formulario('dni');
             if (isset($_POST["acepta"]) AND !($conexion->buscarDni($_POST['dni']))->fetch_assoc())  // si se ha pulsado ya el acepta pero al sacar la fila no es true, te da un error           {
+            { 
                 if ($conexion->numeroError() == 0) 
                 {
                     echo 
